@@ -7,13 +7,6 @@
 $ npm install --save react-mf
 ```
 
-## Usage
-
-```js
-var reactMf = require('react-mf');
-
-reactMf('Rainbow');
-```
 ## License
 
 MIT © [Daniel Kostro]()
