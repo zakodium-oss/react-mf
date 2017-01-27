@@ -19,7 +19,7 @@ module.exports = {
         filename: '[name].js'
     },
     module: {
-        rules: [
+        loaders: [
             {
                 exclude: /node_modules/,
                 loader: 'babel-loader'

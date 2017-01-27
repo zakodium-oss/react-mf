@@ -1,6 +1,6 @@
 import React from 'react';  // eslint-disable-line no-unused-vars
 
-export default function MF(props) {
+export default function Dummy(props) {
     let mf = props.mf;
     // need to deal with charge in parenthesis
     mf = mf.replace(/\(([0-9+-]+)\)/g, function (match) {
@@ -41,9 +41,9 @@ export default function MF(props) {
 
     // overlap sub and sup
     mf = mf.replace(/(<sub>[0-9.]+<\/sub>)(<sup>[0-9]*[+‒]<\/sup>)/g,
-        '$2$1'
+        '<span class="superimpose">$2$1</span>'
     );
 
 
-    return <span className="superimpose" dangerouslySetInnerHTML={{__html: mf}}></span>;
+    return <div dangerouslySetInnerHTML={{__html: mf}}></div>;
 }

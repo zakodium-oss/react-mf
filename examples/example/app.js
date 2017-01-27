@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {MF} from '../../src';
+import {MF} from '../../src/';
 
 const App = class App extends Component {
     constructor(props) {
@@ -23,7 +23,7 @@ const App = class App extends Component {
                 <input onChange={this.onInputChange.bind(this)} />
                 <MF mf={this.state.mf}></MF>
             </div>
-        );
+        )
     }
 };
 
