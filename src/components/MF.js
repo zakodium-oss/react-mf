@@ -1,6 +1,6 @@
 import React from 'react';  // eslint-disable-line no-unused-vars
 
-export default function Dummy(props) {
+export default function MF(props) {
     let mf = props.mf;
     // need to deal with charge in parenthesis
     mf = mf.replace(/\(([0-9+-]+)\)/g, function (match) {
