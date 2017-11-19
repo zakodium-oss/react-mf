@@ -5,6 +5,7 @@ span.superimpose {
     text-align: left;
     vertical-align: middle;
 }
+
 span.superimpose sup, span.superimpose sub {
     line-height: 1;
     font-size: 70%;

@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
 
-import {MF} from '../../src/';
+import MF from '../../src/';
 
-const App = class App extends Component {
+class App extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,11 +21,12 @@ const App = class App extends Component {
         return (
             <div>
                 <input onChange={this.onInputChange.bind(this)} />
+                <br />
                 <MF mf={this.state.mf}></MF>
             </div>
-        )
+        );
     }
-};
+}
 
 ReactDOM.render(
     <App />,
