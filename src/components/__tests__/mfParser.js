@@ -1,7 +1,7 @@
-import parse from './mfParser';
+import parse from '../mfParser';
 
 
 test('C', () => {
     let result = parse('C');
-    expect(result).toBe(2);
+    expect(result.length).toBe(1);
 });

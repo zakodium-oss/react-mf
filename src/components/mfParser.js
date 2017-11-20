@@ -11,7 +11,7 @@ const NUMBER = 'number';
 const CHARGE_OVER_NUMBER = 'chargeOverNumber';
 const SPACER_AND_MULTIPLIER = 'spacerAndMultiplier';
 
-function parse(mf) {
+export default function parse(mf) {
 
     var results = [];
 
