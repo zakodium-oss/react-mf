@@ -4,6 +4,7 @@ import React, {PureComponent} from 'react';  // eslint-disable-line no-unused-va
 export default class MF extends PureComponent {
     render() {
         let mf = this.props.mf;
+
         // need to deal with charge in parenthesis
         mf = mf.replace(/\(([0-9+-]+)\)/g, function (match) {
             var number = match.replace(/[^0-9]/g, '') * 1;
@@ -11,6 +12,7 @@ export default class MF extends PureComponent {
             return charge.repeat(number);
         });
 
+        // number after a sign is a charge
         mf = mf.replace(/([+-])([0-9]+)/g, function (match) {
             var number = match.replace(/[^0-9]/g, '') * 1;
             var charge = match.replace(/[\(\)0-9]/g, '');
