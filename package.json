@@ -12,7 +12,7 @@
         "lib-es6"
     ],
     "main": "lib/index.js",
-    "@std/esm":"js",
+    "@std/esm": "js",
     "keywords": [
         "react",
         "molecular formula"

@@ -46,7 +46,7 @@ function parse(mf) {
             result.push({kind: KIND_ATOM, value: atom});
             continue;
         } else if (ascii > 96 && ascii < 123) { // a lowercase
-            throw new Error('found a lowercase not following an uppercase');
+            throw new MFError(mf, i, 'found a lowercase not following an uppercase');
         } else if (char === '(') {
             [i, charge] = getParenthesisCharge(mf, i, ascii);
             if (charge) {
@@ -60,7 +60,7 @@ function parse(mf) {
             [i, atom] = getIsotope(mf, i, ascii);
             result.push({kind: KIND_ATOM, value: atom});
         } else if (char === ']') {
-            throw new Error('should never meet an closing bracket not in isotopes');
+            throw new MFError(mf, i, 'should never meet an closing bracket not in isotopes');
         } else if (char === '{') {  // can define an exotic isotopic ratio or mixtures of groups
 
         } else if (char === '}') {
@@ -222,8 +222,18 @@ function convertForDisplay(lines) {
     return results;
 }
 
+
+class MFError extends SyntaxError {
+    constructor(mf, i, message) {
+        let text = message+'\n\n'+mf+'\n'+' '.repeat(i)+'^';
+        super(text);
+    }
+}
+
 // var result = parse('(CH3)2NO32[13C]2(++)-2');
-var results = parse('CH3(+3) . 3NH3');
+var results = parse('Na a [13C]H3(+3) .0.53NH3');
+console.log(results);
 results = convertForDisplay(results);
 console.log(results);
 // parse('(CH3CH2)3N . [2H]2O3++ . 0.5H3O(+) . NH4+ . NO3-- . NO3(2-) . NO3 (-2)');
+
