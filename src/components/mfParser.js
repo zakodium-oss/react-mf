@@ -93,7 +93,7 @@ function getCharge(charge) {
     var chargeNumber = 0;
     if (charge.match(/^[+-]+$/)) {
         for (var i = 0; i < charge.length; i++) {
-            if (charge.charAt(i) === '+') chachargeNumberrge++;
+            if (charge.charAt(i) === '+') chargeNumber++;
             else chargeNumber--;
         }
     } else {
