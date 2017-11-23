@@ -51,5 +51,8 @@
         "webpack-dev-server": "^1.16.2"
     },
     "repository": "neptunjs/react-mf",
-    "license": "MIT"
+    "license": "MIT",
+    "dependencies": {
+        "mf-parser": "0.0.3"
+    }
 }

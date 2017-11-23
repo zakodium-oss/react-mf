@@ -22,7 +22,7 @@ class App extends PureComponent {
             <div>
                 <input onChange={this.onInputChange.bind(this)} />
                 <br />
-                <MF mf={this.state.mf}></MF>
+                <span><MF mf={this.state.mf}></MF></span>
             </div>
         );
     }
