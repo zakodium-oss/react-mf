@@ -15,15 +15,17 @@ const STYLE_SUPERIMPOSE_SUP_SUB = {
 
 
 export default function MF(props) {
+    let parsed;
     try {
-        let parsed = MFParser.parse(props.mf);
-        let displayed = MFParser.toDisplay(parsed);
-        return <span>
-                {displayed.map((element, index) => getComponent(element, index))}
-            </span>;
+        parsed = MFParser.parse(props.mf);
     } catch (e) { // if not well formatted we just display the value
         return <span>{props.mf}</span>;
     }
+    let displayed = MFParser.toDisplay(parsed);
+    return <span>
+            {displayed.map((element, index) => getComponent(element, index))}
+        </span>;
+
 }
 
 function getComponent(element, index) {
