@@ -1,49 +1,46 @@
 import React from 'react';  // eslint-disable-line no-unused-vars
+import MFParser, {Format} from 'mf-parser';
+
+const STYLE_SUPERIMPOSE = {
+    flexDirection: 'column',
+    display: 'inline-flex',
+    justifyContent: 'center',
+    textAlign: 'left',
+    verticalAlign: 'middle'
+};
+const STYLE_SUPERIMPOSE_SUP_SUB = {
+    lineHeight: 1,
+    fontSize: '70%'
+};
+
 
 export default function MF(props) {
-    let mf = props.mf;
-    // need to deal with charge in parenthesis
-    mf = mf.replace(/\(([0-9+-]+)\)/g, function (match) {
-        var number = match.replace(/[^0-9]/g, '') * 1;
-        var charge = match.replace(/[\(\)0-9]/g, '');
-        return charge.repeat(number);
-    });
+    try {
+        let parsed = MFParser.parse(props.mf);
+        let displayed = MFParser.toDisplay(parsed);
+        return <span>
+                {displayed.map((element, index) => getComponent(element, index))}
+            </span>;
+    } catch (e) { // if not well formatted we just display the value
+        return <span>{props.mf}</span>;
+    }
+}
 
-    mf = mf.replace(/([+-])([0-9]+)/g, function (match) {
-        var number = match.replace(/[^0-9]/g, '') * 1;
-        var charge = match.replace(/[\(\)0-9]/g, '');
-        return charge.repeat(number);
-    });
+function getComponent(element, index) {
+    switch (element.kind) {
+        case Format.SUBSCRIPT:
+            return <sub key={index}>{element.value}</sub>;
+        case Format.SUPERSCRIPT:
+            return <sup key={index}>{element.value}</sup>;
+        case Format.SUPERIMPOSE:
+            return (
+                <span key={index} style={STYLE_SUPERIMPOSE}>
+                    <sup style={STYLE_SUPERIMPOSE_SUP_SUB}>{element.over}</sup>
+                    <sub style={STYLE_SUPERIMPOSE_SUP_SUB}>{element.under}</sub>
+                </span>
+            );
 
-    // need to deal with isotopes
-    mf = mf.replace(/\[([0-9]+)/g, '[<sup>$1</sup>');
-
-    // replace number following parenthesis or letter
-    mf = mf.replace(/([a-zA-Z)\]])([0-9.]+)/g, '$1<sub>$2</sub>');
-
-    mf = mf.replace(/([+-]+)/g, function (match) {
-        var charge = 0;
-        for (var i = 0; i < match.length; i++) {
-            if (match.charAt(i) === '+') charge++;
-            else charge--;
-        }
-        if (charge > 1) {
-            return '<sup>' + charge + '+</sup>';
-        } else if (charge < -1) {
-            return '<sup>' + -charge + '‒</sup>';
-        } else if (charge === 1) {
-            return '<sup>+</sup>';
-        } else if (charge === -1) {
-            return '<sup>‒</sup>';
-        }
-        return '';
-    });
-
-    // overlap sub and sup
-    mf = mf.replace(/(<sub>[0-9.]+<\/sub>)(<sup>[0-9]*[+‒]<\/sup>)/g,
-        '<span class="superimpose">$2$1</span>'
-    );
-
-
-    return <div dangerouslySetInnerHTML={{__html: mf}}></div>;
+        default:
+            return element.value;
+    }
 }
