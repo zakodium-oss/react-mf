@@ -13,6 +13,7 @@ for (const example of examples) {
 
 module.exports = {
   entry: entry,
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   output: {
     path: __dirname,
     filename: '[name].js'

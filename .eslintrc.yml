@@ -1,11 +1,1 @@
-env:
-  es6: true
-  browser: true
-  jest: true
 extends: cheminfo
-parserOptions:
-  ecmaVersion: 2017
-  sourceType: module
-  ecmaFeatures:
-    jsx: true
-    experimentalObjectRestSpread: true
