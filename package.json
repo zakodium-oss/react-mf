@@ -1,56 +1,57 @@
 {
-    "name": "react-mf",
-    "version": "1.0.0",
-    "description": "A react component to display molecular formulas",
-    "homepage": "",
-    "author": {
-        "name": "Daniel Kostro",
-        "email": "kostro.d@gmail.com"
-    },
-    "files": [
-        "lib",
-        "lib-es6"
-    ],
-    "main": "lib/index.js",
-    "keywords": [
-        "react",
-        "molecular formula"
-    ],
-    "module": "lib-es6/index.js",
-    "scripts": {
-        "compile": "babel src --out-dir lib --ignore __tests__ --quiet",
-        "compile-es6": "BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
-        "start": "webpack-dev-server",
-        "test": "echo 'no test for now'",
-        "eslint": "eslint src",
-        "eslint-fix": "eslint --fix src",
-        "prepublishOnly": "run-p compile compile-es6"
-    },
-    "peerDependencies": {
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0"
-    },
-    "devDependencies": {
-        "babel-cli": "^6.22.2",
-        "babel-core": "^6.22.1",
-        "babel-loader": "^7.1.2",
-        "babel-preset-env": "^1.1.8",
-        "babel-preset-react": "^6.22.0",
-        "eslint": "^4.15.0",
-        "eslint-config-neptune-react": "^2.2.0",
-        "eslint-plugin-jest": "^21.6.0",
-        "eslint-plugin-react": "^7.5.1",
-        "jest": "^22.0.4",
-        "npm-run-all": "^4.0.1",
-        "react": "^16.2.0",
-        "react-dom": "^16.2.0",
-        "react-test-renderer": "^16.2.0",
-        "webpack": "^3.10.0",
-        "webpack-dev-server": "2.9.7"
-    },
-    "repository": "neptunejs/react-mf",
-    "license": "MIT",
-    "dependencies": {
-        "mf-parser": "^0.4.3"
-    }
+  "name": "react-mf",
+  "version": "1.0.0",
+  "description": "A react component to display molecular formulas",
+  "homepage": "",
+  "author": {
+    "name": "Daniel Kostro",
+    "email": "kostro.d@gmail.com"
+  },
+  "files": [
+    "lib",
+    "lib-es6"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "react",
+    "molecular formula"
+  ],
+  "module": "lib-es6/index.js",
+  "scripts": {
+    "compile": "babel src --out-dir lib --ignore __tests__ --quiet",
+    "compile-es6": "BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
+    "start": "webpack-serve",
+    "test": "echo 'no test for now'",
+    "eslint": "eslint src",
+    "eslint-fix": "eslint --fix src",
+    "prepublishOnly": "run-p compile compile-es6"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "eslint": "^4.15.0",
+    "eslint-config-neptune-react": "^2.2.0",
+    "eslint-plugin-jest": "^21.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^23.6.0",
+    "npm-run-all": "^4.0.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
+    "webpack": "^4.18.0",
+    "webpack-dev-server": "2.9.7",
+    "webpack-serve": "^2.0.2"
+  },
+  "repository": "neptunejs/react-mf",
+  "license": "MIT",
+  "dependencies": {
+    "mf-parser": "^0.4.3"
+  }
 }
