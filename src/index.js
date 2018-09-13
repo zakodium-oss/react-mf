@@ -1,3 +1,3 @@
 import MF from './components/MF';
 
-export {MF};
+export { MF };
