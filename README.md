@@ -20,5 +20,9 @@ function MyComponent() {
 }
 ```
 
-[npm-image]: https://badge.fury.io/js/react-mf.svg
-[npm-url]: https://npmjs.org/package/react-mf
+## Documentation
+
+See https://neptunejs.github.io/react-mf/ for detailed usage examples.
+
+[npm-image]: https://img.shields.io/npm/v/react-mf.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/react-mf
