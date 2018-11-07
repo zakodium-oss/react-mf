@@ -1,1 +1,2 @@
 extends: neptune-react
+parser: babel-eslint
