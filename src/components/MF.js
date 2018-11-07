@@ -10,9 +10,14 @@ const STYLE_SUPERIMPOSE = {
   textAlign: 'left',
   verticalAlign: 'middle'
 };
+
 const STYLE_SUPERIMPOSE_SUP_SUB = {
   lineHeight: 1,
   fontSize: '70%'
+};
+
+const mainStyle = {
+  fontFamily: 'sans-serif'
 };
 
 export default function MF(props) {
@@ -21,11 +26,11 @@ export default function MF(props) {
     parsed = parse(props.mf);
   } catch (e) {
     // if not well formatted we just display the value
-    return <span>{props.mf}</span>;
+    return <span style={mainStyle}>{props.mf}</span>;
   }
   let displayed = toDisplay(parsed);
   return (
-    <span>
+    <span style={mainStyle}>
       {displayed.map((element, index) => getComponent(element, index))}
     </span>
   );
