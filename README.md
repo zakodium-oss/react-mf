@@ -1,28 +1,24 @@
 # react-mf
 
-[![NPM version][npm-image]][npm-url] [![Dependency Status][daviddm-image]][daviddm-url]
+[![NPM version][npm-image]][npm-url]
 
-A react component to display molecular formulas
+A react component to display molecular formulas.
 
 ## Installation
 
-```sh
-$ npm install --save react-mf
+```console
+npm install --save react-mf
 ```
 
 ## Usage
 
 ```jsx
-import {MF} from 'react-mf';
+import { MF } from 'react-mf';
 
-function App() {
-    return (
-        <MF mf="C6H6" />
-    )
+function MyComponent() {
+  return <MF mf="C6H6" />;
 }
 ```
 
 [npm-image]: https://badge.fury.io/js/react-mf.svg
 [npm-url]: https://npmjs.org/package/react-mf
-[daviddm-image]: https://david-dm.org/neptunejs/react-mf.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/neptunejs/react-mf
