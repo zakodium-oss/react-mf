@@ -1,4 +1,5 @@
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React, { PureComponent } from 'react'; // eslint-disable-line no-unused-vars
+import propTypes from 'prop-types';
 import Format from 'mf-parser/src/Format';
 import parse from 'mf-parser/src/parse';
 import toDisplay from 'mf-parser/src/util/toDisplay';
@@ -20,21 +21,38 @@ const mainStyle = {
   fontFamily: 'sans-serif'
 };
 
-export default function MF(props) {
-  let parsed;
-  try {
-    parsed = parse(props.mf);
-  } catch (e) {
-    // if not well formatted we just display the value
-    return <span style={mainStyle}>{props.mf}</span>;
+export default class MF extends PureComponent {
+  render() {
+    const { mf, className, style } = this.props;
+    let fullStyle = mainStyle;
+    if (style) {
+      fullStyle = Object.assign({}, mainStyle, style);
+    }
+    let parsed;
+    try {
+      parsed = parse(mf);
+    } catch (e) {
+      // if not well formatted we just display the value
+      return (
+        <span className={className} style={fullStyle}>
+          {mf}
+        </span>
+      );
+    }
+    let displayed = toDisplay(parsed);
+    return (
+      <span className={className} style={fullStyle}>
+        {displayed.map((element, index) => getComponent(element, index))}
+      </span>
+    );
   }
-  let displayed = toDisplay(parsed);
-  return (
-    <span style={mainStyle}>
-      {displayed.map((element, index) => getComponent(element, index))}
-    </span>
-  );
 }
+
+MF.propTypes = {
+  mf: propTypes.string.isRequired,
+  className: propTypes.string,
+  style: propTypes.object
+};
 
 function getComponent(element, index) {
   switch (element.kind) {

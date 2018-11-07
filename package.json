@@ -23,7 +23,6 @@
     "eslint": "eslint src",
     "eslint-fix": "eslint --fix src",
     "prepare": "npm run compile && npm run compile-es6",
-    "start": "webpack-serve",
     "storybook": "start-storybook -p 6006",
     "test": "npm run eslint"
   },
@@ -37,6 +36,7 @@
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.0.4",
+    "@storybook/addon-info": "^4.0.4",
     "@storybook/addon-knobs": "^4.0.4",
     "@storybook/addon-links": "^4.0.4",
     "@storybook/addons": "^4.0.4",
@@ -45,7 +45,7 @@
     "babel-loader": "^8.0.4",
     "eslint": "^5.8.0",
     "eslint-config-cheminfo": "^1.18.0",
-    "eslint-config-neptune-react": "^2.5.1",
+    "eslint-config-neptune-react": "^2.5.2",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.27.2",
     "eslint-plugin-react": "^7.11.1",
@@ -56,6 +56,7 @@
   "repository": "neptunejs/react-mf",
   "license": "MIT",
   "dependencies": {
-    "mf-parser": "^0.6.4"
+    "mf-parser": "^0.6.4",
+    "prop-types": "^15.6.2"
   }
 }
