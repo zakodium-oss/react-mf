@@ -20,7 +20,7 @@
     "build-docs": "build-storybook -o docs",
     "compile": "babel src --out-dir lib --ignore __tests__ --quiet",
     "compile-es6": "BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
-    "eslint": "eslint src",
+    "eslint": "eslint src stories",
     "eslint-fix": "eslint --fix src",
     "prepare": "npm run compile && npm run compile-es6",
     "storybook": "start-storybook -p 6006",
