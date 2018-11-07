@@ -1,3 +1,17 @@
+# [1.1.0](https://github.com/neptunejs/react-mf/compare/v1.0.0...v1.1.0) (2018-11-07)
+
+
+### Bug Fixes
+
+* use a sans-serif font ([2da7b8e](https://github.com/neptunejs/react-mf/commit/2da7b8e))
+
+
+### Features
+
+* add support for style and className props ([ba142a2](https://github.com/neptunejs/react-mf/commit/ba142a2))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/neptunejs/react-mf/compare/v0.1.0...v1.0.0) (2018-01-09)
 
