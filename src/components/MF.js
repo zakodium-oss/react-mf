@@ -41,6 +41,7 @@ export default class MF extends PureComponent {
 }
 
 MF.propTypes = {
+  /** molecular formula */
   mf: propTypes.string.isRequired,
   className: propTypes.string,
   style: propTypes.object
