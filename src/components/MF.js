@@ -9,11 +9,11 @@ const STYLE_SUPERIMPOSE = {
   display: 'inline-flex',
   justifyContent: 'center',
   textAlign: 'left',
-  verticalAlign: 'middle'
+  verticalAlign: 'middle',
 };
 
 const STYLE_SUPERIMPOSE_SUP_SUB = {
-  lineHeight: 1,
+  lineHeight: 0.9,
   fontSize: '70%'
 };
 
@@ -65,8 +65,8 @@ function getComponent(element, index) {
     case Format.SUPERIMPOSE: {
       return (
         <span key={index} style={STYLE_SUPERIMPOSE}>
-          <sup style={STYLE_SUPERIMPOSE_SUP_SUB}>{element.over}</sup>
-          <sub style={STYLE_SUPERIMPOSE_SUP_SUB}>{element.under}</sub>
+          <span style={STYLE_SUPERIMPOSE_SUP_SUB}>{element.over}</span>
+          <span style={STYLE_SUPERIMPOSE_SUP_SUB}>{element.under}</span>
         </span>
       );
     }
