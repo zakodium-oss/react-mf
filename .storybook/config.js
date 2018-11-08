@@ -15,7 +15,8 @@ addDecorator(
     styles: {
       infoStory: {
         border: '1px solid rgb(238, 238, 238)',
-        padding: 30
+        padding: 30,
+        fontFamily: 'sans-serif'
       }
     }
   })

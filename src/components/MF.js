@@ -17,31 +17,23 @@ const STYLE_SUPERIMPOSE_SUP_SUB = {
   fontSize: '80%'
 };
 
-const mainStyle = {
-  fontFamily: 'sans-serif'
-};
-
 export default class MF extends PureComponent {
   render() {
     const { mf, className, style } = this.props;
-    let fullStyle = mainStyle;
-    if (style) {
-      fullStyle = Object.assign({}, mainStyle, style);
-    }
     let parsed;
     try {
       parsed = parse(mf);
     } catch (e) {
       // if not well formatted we just display the value
       return (
-        <span className={className} style={fullStyle}>
+        <span className={className} style={style}>
           {mf}
         </span>
       );
     }
     let displayed = toDisplay(parsed);
     return (
-      <span className={className} style={fullStyle}>
+      <span className={className} style={style}>
         {displayed.map((element, index) => getComponent(element, index))}
       </span>
     );
