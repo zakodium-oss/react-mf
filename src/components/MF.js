@@ -13,8 +13,8 @@ const STYLE_SUPERIMPOSE = {
 };
 
 const STYLE_SUPERIMPOSE_SUP_SUB = {
-  lineHeight: 0.9,
-  fontSize: '70%'
+  lineHeight: 0.8,
+  fontSize: '80%'
 };
 
 const mainStyle = {
