@@ -1,3 +1,13 @@
+## [1.1.1](https://github.com/neptunejs/react-mf/compare/v1.1.0...v1.1.1) (2018-11-08)
+
+
+### Bug Fixes
+
+* increase superimpose size ([8f64bec](https://github.com/neptunejs/react-mf/commit/8f64bec))
+* remove style sans-serif by default ([bc0a9b7](https://github.com/neptunejs/react-mf/commit/bc0a9b7))
+
+
+
 # [1.1.0](https://github.com/neptunejs/react-mf/compare/v1.0.0...v1.1.0) (2018-11-07)
 
 
