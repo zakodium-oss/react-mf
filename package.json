@@ -19,7 +19,7 @@
   "scripts": {
     "build-docs": "build-storybook -o docs",
     "compile": "babel src --out-dir lib --ignore __tests__ --quiet",
-    "compile-es6": "BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
+    "compile-es6": "cross-env BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
     "eslint": "eslint src stories",
     "eslint-fix": "eslint --fix src",
     "prepare": "npm run compile && npm run compile-es6",
@@ -31,32 +31,33 @@
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.5",
-    "@babel/core": "^7.1.5",
-    "@babel/preset-env": "^7.1.5",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^4.0.4",
-    "@storybook/addon-info": "^4.0.4",
-    "@storybook/addon-knobs": "^4.0.4",
-    "@storybook/addon-links": "^4.0.4",
-    "@storybook/addons": "^4.0.4",
-    "@storybook/react": "^4.0.4",
+    "@storybook/addon-actions": "^5.0.3",
+    "@storybook/addon-info": "^5.0.3",
+    "@storybook/addon-knobs": "^5.0.3",
+    "@storybook/addon-links": "^5.0.3",
+    "@storybook/addons": "^5.0.3",
+    "@storybook/react": "^5.0.3",
     "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
-    "eslint": "^5.8.0",
-    "eslint-config-cheminfo": "^1.18.0",
-    "eslint-config-neptune-react": "^2.5.2",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^21.27.2",
-    "eslint-plugin-react": "^7.11.1",
-    "jest": "^23.6.0",
-    "react": "^16.6.1",
-    "react-dom": "^16.6.1"
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.15.3",
+    "eslint-config-cheminfo": "^1.20.0",
+    "eslint-config-neptune-react": "^2.6.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.5.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "repository": "zakodium/react-mf",
   "license": "MIT",
   "dependencies": {
-    "mf-parser": "^0.6.4",
-    "prop-types": "^15.6.2"
+    "mf-parser": "^0.9.1",
+    "prop-types": "^15.7.2"
   }
 }
