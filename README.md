@@ -22,7 +22,7 @@ function MyComponent() {
 
 ## Documentation
 
-See https://neptunejs.github.io/react-mf/ for detailed usage examples.
+See https://zakodium.github.io/react-mf/ for detailed usage examples.
 
 [npm-image]: https://img.shields.io/npm/v/react-mf.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/react-mf
