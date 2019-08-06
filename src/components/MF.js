@@ -19,14 +19,14 @@ const STYLE_SUPERIMPOSE_SUP_SUB = {
 
 export default class MF extends PureComponent {
   render() {
-    const { mf, className, style } = this.props;
+    const { mf, className, style, ...otherProps } = this.props;
     let parsed;
     try {
       parsed = parse(mf);
     } catch (e) {
       // if not well formatted we just display the value
       return (
-        <span className={className} style={style}>
+        <span className={className} style={style} {...otherProps}>
           {mf}
         </span>
       );
