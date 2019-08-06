@@ -33,7 +33,7 @@ export default class MF extends PureComponent {
     }
     let displayed = toDisplay(parsed);
     return (
-      <span className={className} style={style}>
+      <span className={className} style={style} {...otherProps}>
         {displayed.map((element, index) => getComponent(element, index))}
       </span>
     );
