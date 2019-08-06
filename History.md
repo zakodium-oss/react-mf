@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/zakodium/react-mf/compare/v1.1.2...v1.2.0) (2019-08-06)
+
+
+### Features
+
+* allow passing props to react-mf span ([#6](https://github.com/zakodium/react-mf/issues/6)) ([af72b4d](https://github.com/zakodium/react-mf/commit/af72b4d))
+
+
+
 ## [1.1.2](https://github.com/zakodium/react-mf/compare/v1.1.1...v1.1.2) (2019-03-22)
 
 
