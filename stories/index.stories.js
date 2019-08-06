@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 
 import { MF } from '../src';
@@ -12,9 +13,9 @@ storiesOf('MF', module)
     <div>
       <style>
         {`.custom-css {
-  font-weight: bold;
-  color: red;
-}`}
+            font-weight: bold;
+            color: red;
+          }`}
       </style>
       <MF mf={text('mf', exampleMf)} className="custom-css" />
     </div>
@@ -25,9 +26,7 @@ storiesOf('MF', module)
   .add('Font-family monospace', () => (
     <MF style={{ fontFamily: 'monospace' }} mf={text('mf', exampleMf)} />
   ))
-  .add('Charged salt', () => (
-    <MF mf={text('mf', '2Na+.SO4(--)')} />
-  ))
+  .add('Charged salt', () => <MF mf={text('mf', '2Na+.SO4(--)')} />)
   .add('Passing props', () => (
-    <MF mf={text('mf', exampleMf)} onClick={() => alert('It works!')} />
+    <MF mf={text('mf', exampleMf)} onClick={action('onClick fired')} />
   ));
