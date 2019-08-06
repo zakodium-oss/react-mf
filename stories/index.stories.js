@@ -27,4 +27,7 @@ storiesOf('MF', module)
   ))
   .add('Charged salt', () => (
     <MF mf={text('mf', '2Na+.SO4(--)')} />
+  ))
+  .add('Passing props', () => (
+    <MF mf={text('mf', exampleMf)} onClick={() => alert('It works!')} />
   ));
