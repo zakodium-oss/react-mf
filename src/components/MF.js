@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react'; // eslint-disable-line no-unused-vars
-import propTypes from 'prop-types';
 import Format from 'mf-parser/src/Format';
 import parse from 'mf-parser/src/parse';
 import toDisplay from 'mf-parser/src/util/toDisplay';
+import propTypes from 'prop-types';
+import React, { PureComponent } from 'react'; // eslint-disable-line no-unused-vars
 
 const STYLE_SUPERIMPOSE = {
   flexDirection: 'column',
@@ -14,7 +14,7 @@ const STYLE_SUPERIMPOSE = {
 
 const STYLE_SUPERIMPOSE_SUP_SUB = {
   lineHeight: 0.8,
-  fontSize: '80%'
+  fontSize: '80%',
 };
 
 export default class MF extends PureComponent {
@@ -44,7 +44,7 @@ MF.propTypes = {
   /** molecular formula */
   mf: propTypes.string.isRequired,
   className: propTypes.string,
-  style: propTypes.object
+  style: propTypes.object,
 };
 
 function getComponent(element, index) {
