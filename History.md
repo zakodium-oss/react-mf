@@ -1,3 +1,7 @@
+## [1.2.1](https://github.com/zakodium/react-mf/compare/v1.2.0...v1.2.1) (2020-04-05)
+
+
+
 # [1.2.0](https://github.com/zakodium/react-mf/compare/v1.1.2...v1.2.0) (2019-08-06)
 
 
