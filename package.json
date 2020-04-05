@@ -58,7 +58,7 @@
   "repository": "zakodium/react-mf",
   "license": "MIT",
   "dependencies": {
-    "mf-parser": "^1.1.4",
+    "mf-parser": "^1.1.5",
     "prop-types": "^15.7.2"
   }
 }
