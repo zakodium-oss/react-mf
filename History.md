@@ -1,3 +1,17 @@
+# [2.0.0](https://github.com/zakodium/react-mf/compare/v1.2.1...v2.0.0) (2020-07-14)
+
+
+### chore
+
+* update dependencies ([6b29493](https://github.com/zakodium/react-mf/commit/6b2949357af509ca72f1f71ffe0343df4393872d))
+
+
+### BREAKING CHANGES
+
+* The package is no longer transpiled using babel's env preset.
+
+
+
 ## [1.2.1](https://github.com/zakodium/react-mf/compare/v1.2.0...v1.2.1) (2020-04-05)
 
 
