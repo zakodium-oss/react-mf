@@ -1,2 +1,1 @@
-extends: neptune-react
-parser: babel-eslint
+extends: cheminfo-react
