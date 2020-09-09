@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/zakodium/react-mf/compare/v2.0.0...v2.0.1) (2020-09-09)
+
+
+### Bug Fixes
+
+* move babel package to dev dependencies ([bf965af](https://github.com/zakodium/react-mf/commit/bf965af071b3ebc55332012a9fb3fded2c7caad1))
+
+
+
 # [2.0.0](https://github.com/zakodium/react-mf/compare/v1.2.1...v2.0.0) (2020-07-14)
 
 
