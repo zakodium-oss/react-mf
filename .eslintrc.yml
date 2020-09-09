@@ -1,1 +1,1 @@
-extends: cheminfo-react
+extends: '@zakodium/eslint-config/react'
