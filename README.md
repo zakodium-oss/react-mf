@@ -1,4 +1,5 @@
 # react-mf
+
 React component to display molecular formulas.
 
 <h3 align="center">
