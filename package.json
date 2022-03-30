@@ -1,7 +1,7 @@
 {
   "name": "react-mf",
   "version": "2.0.1",
-  "description": "A react component to display molecular formulas",
+  "description": "A react component to display molecular formulae",
   "author": {
     "name": "Daniel Kostro",
     "email": "kostro.d@gmail.com"

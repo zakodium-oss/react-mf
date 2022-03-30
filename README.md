@@ -1,6 +1,6 @@
 # react-mf
 
-React component to display molecular formulas.
+React component to display molecular formulae.
 
 <h3 align="center">
 
@@ -12,9 +12,9 @@ React component to display molecular formulas.
     Maintained by <a href="https://www.zakodium.com">Zakodium</a>
   </p>
 
-  [![NPM version][npm-image]][npm-url]
-  [![build status][ci-image]][ci-url]
-  [![npm download][download-image]][download-url]
+[![NPM version][npm-image]][npm-url]
+[![build status][ci-image]][ci-url]
+[![npm download][download-image]][download-url]
 
 </h3>
 
