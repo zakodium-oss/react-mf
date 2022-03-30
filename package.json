@@ -20,7 +20,7 @@
   "module": "lib-es6/index.js",
   "types": "react-mf.d.ts",
   "scripts": {
-    "build-storybook": "build-storybook -o docs",
+    "build-storybook": "build-storybook",
     "compile": "babel src --out-dir lib --ignore __tests__ --quiet",
     "compile-es6": "cross-env BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
     "eslint": "eslint src stories",

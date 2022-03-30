@@ -79,3 +79,4 @@ lib
 lib-es6
 
 .vscode
+storybook-static
