@@ -36,11 +36,11 @@ function MyComponent() {
 
 ## Documentation
 
-See https://zakodium.github.io/react-mf/ for detailed usage examples.
+See https://zakodium-oss.github.io/react-mf/ for detailed usage examples.
 
 [npm-image]: https://img.shields.io/npm/v/react-mf.svg
 [npm-url]: https://npmjs.org/package/react-mf
-[ci-image]: https://github.com/zakodium/react-mf/workflows/Node.js%20CI/badge.svg?branch=master
-[ci-url]: https://github.com/zakodium/react-mf/actions?query=workflow%3A%22Node.js+CI%22
+[ci-image]: https://github.com/zakodium-oss/react-mf/workflows/Node.js%20CI/badge.svg?branch=main
+[ci-url]: https://github.com/zakodium-oss/react-mf/actions?query=workflow%3A%22Node.js+CI%22
 [download-image]: https://img.shields.io/npm/dm/react-mf.svg
 [download-url]: https://npmjs.org/package/react-mf

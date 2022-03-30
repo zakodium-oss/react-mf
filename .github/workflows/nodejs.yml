@@ -2,19 +2,14 @@ name: Node.js CI
 
 on:
   push:
-    branches: master
+    branches:
+      - main
   pull_request:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 14
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-      - name: npm install and test
-        run: |
-          npm install
-          npm run eslint
+  nodejs:
+    # Documentation: https://github.com/zakodium/workflows#nodejs-ci
+    uses: zakodium/workflows/.github/workflows/nodejs.yml@nodejs-v1
+    with:
+      lint-prettier: false
+      disable-tests: true
