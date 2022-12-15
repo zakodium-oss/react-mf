@@ -1,1 +1,3 @@
-extends: '@zakodium/eslint-config/react'
+extends:
+  - zakodium/js
+  - zakodium/react

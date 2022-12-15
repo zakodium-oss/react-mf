@@ -1,6 +1,4 @@
-import Format from 'mf-parser/src/Format';
-import parse from 'mf-parser/src/parse';
-import toDisplay from 'mf-parser/src/util/toDisplay';
+import { Format, parse, toDisplay } from 'mf-parser';
 import propTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
