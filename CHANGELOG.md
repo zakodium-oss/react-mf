@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.2](https://github.com/zakodium-oss/react-mf/compare/v2.0.1...v2.0.2) (2022-12-15)
+
+
+### Bug Fixes
+
+* update dependencies ([61f7ec4](https://github.com/zakodium-oss/react-mf/commit/61f7ec43f38516c1712efe1aca0ffca5ac033777))
+
+
+### Documentation
+
+* add header on README ([#12](https://github.com/zakodium-oss/react-mf/issues/12)) ([07cd3bb](https://github.com/zakodium-oss/react-mf/commit/07cd3bb141b86bbd5f11019d43fb854ac7e3df8c))
+
 ## [2.0.1](https://github.com/zakodium/react-mf/compare/v2.0.0...v2.0.1) (2020-09-09)
 
 
