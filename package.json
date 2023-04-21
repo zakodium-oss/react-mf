@@ -34,29 +34,29 @@
     "react-dom": ">=16"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.4",
-    "@storybook/addon-links": "^7.0.4",
-    "@storybook/addon-storysource": "^7.0.4",
-    "@storybook/react": "^7.0.4",
-    "@storybook/react-vite": "^7.0.4",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
-    "@vitejs/plugin-react": "^3.1.0",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/addon-storysource": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-vite": "^7.0.6",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.29.0",
-    "eslint-config-zakodium": "7.0.0",
+    "eslint": "^8.38.0",
+    "eslint-config-zakodium": "7.2.0",
     "eslint-plugin-storybook": "^0.6.11",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "storybook": "^7.0.4",
-    "vite": "^4.2.0",
+    "storybook": "^7.0.6",
+    "vite": "^4.3.1",
     "vite-plugin-no-bundle": "^2.0.2"
   },
   "repository": "zakodium-oss/react-mf",
   "license": "MIT",
   "dependencies": {
-    "mf-parser": "^2.0.0",
+    "mf-parser": "^2.2.1",
     "prop-types": "^15.8.1"
   },
   "prettier": {
@@ -65,8 +65,5 @@
     "singleQuote": true,
     "semi": true,
     "trailingComma": "all"
-  },
-  "volta": {
-    "node": "16.19.0"
   }
 }
