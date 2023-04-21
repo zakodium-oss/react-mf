@@ -19,7 +19,7 @@
   "module": "lib/index.mjs",
   "types": "react-mf.d.ts",
   "scripts": {
-    "build-storybook": "storybook build",
+    "build-storybook": "cross-env STORYBOOK_BUILD=1 storybook build",
     "compile": "vite build && cross-env VITE_BUID_CJS=1 vite build",
     "eslint": "eslint src stories",
     "eslint-fix": "npm run eslint -- --fix",
