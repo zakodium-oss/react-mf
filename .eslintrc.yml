@@ -1,3 +1,4 @@
 extends:
+  - plugin:storybook/recommended
   - zakodium/js
   - zakodium/react

@@ -10,17 +10,17 @@
     "lib",
     "react-mf.d.ts"
   ],
-  "main": "lib/index.cjs.js",
+  "main": "lib/index.cjs",
   "keywords": [
     "react",
     "molecular formula",
     "mf renderer"
   ],
-  "module": "lib/index.es.js",
+  "module": "lib/index.mjs",
   "types": "react-mf.d.ts",
   "scripts": {
     "build-storybook": "storybook build",
-    "compile": "vite build",
+    "compile": "vite build && cross-env VITE_BUID_CJS=1 vite build",
     "eslint": "eslint src stories",
     "eslint-fix": "npm run eslint -- --fix",
     "prepack": "npm run compile",
