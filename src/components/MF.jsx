@@ -1,6 +1,6 @@
 import { Format, parse, toDisplay } from 'mf-parser';
 import propTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 
 const STYLE_SUPERIMPOSE = {
   flexDirection: 'column',

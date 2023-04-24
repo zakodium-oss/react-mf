@@ -8,25 +8,23 @@
   },
   "files": [
     "lib",
-    "lib-es6",
     "react-mf.d.ts"
   ],
-  "main": "lib/index.js",
+  "main": "lib/index.cjs",
   "keywords": [
     "react",
     "molecular formula",
     "mf renderer"
   ],
-  "module": "lib-es6/index.js",
+  "module": "lib/index.mjs",
   "types": "react-mf.d.ts",
   "scripts": {
-    "build-storybook": "build-storybook",
-    "compile": "babel src --out-dir lib --ignore __tests__ --quiet",
-    "compile-es6": "cross-env BABEL_ENV=es6 babel src --out-dir lib-es6 --ignore __tests__ --quiet",
+    "build-storybook": "cross-env STORYBOOK_BUILD=1 storybook build",
+    "compile": "vite build && cross-env VITE_BUID_CJS=1 vite build",
     "eslint": "eslint src stories",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepack": "npm run compile && npm run compile-es6",
-    "dev": "start-storybook -p 6006",
+    "prepack": "npm run compile",
+    "dev": "storybook dev -p 6006",
     "test": "npm run eslint && npm run prettier",
     "prettier": "prettier --check src stories",
     "prettier-write": "prettier --write src stories"
@@ -36,25 +34,29 @@
     "react-dom": ">=16"
   },
   "devDependencies": {
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.5",
-    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
-    "@babel/preset-react": "^7.18.6",
-    "@storybook/addon-essentials": "^6.5.14",
-    "@storybook/addon-links": "^6.5.14",
-    "@storybook/addon-storysource": "^6.5.14",
-    "@storybook/react": "^6.5.14",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/addon-storysource": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-vite": "^7.0.6",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.29.0",
-    "eslint-config-zakodium": "7.0.0",
-    "prettier": "^2.8.1",
+    "eslint": "^8.38.0",
+    "eslint-config-zakodium": "7.2.0",
+    "eslint-plugin-storybook": "^0.6.11",
+    "prettier": "^2.8.7",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "storybook": "^7.0.6",
+    "vite": "^4.3.1",
+    "vite-plugin-no-bundle": "^2.0.2"
   },
   "repository": "zakodium-oss/react-mf",
   "license": "MIT",
   "dependencies": {
-    "mf-parser": "^2.0.0",
+    "mf-parser": "^2.2.1",
     "prop-types": "^15.8.1"
   },
   "prettier": {
@@ -63,8 +65,5 @@
     "singleQuote": true,
     "semi": true,
     "trailingComma": "all"
-  },
-  "volta": {
-    "node": "16.19.0"
   }
 }
