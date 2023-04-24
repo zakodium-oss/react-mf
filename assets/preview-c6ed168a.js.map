@@ -1,0 +1,1 @@
+{"version":3,"file":"preview-c6ed168a.js","sources":["../../.storybook/preview.js"],"sourcesContent":["export default {\n  actions: { argTypesRegex: '^on[A-Z].*' },\n};\n"],"names":["preview"],"mappings":"AAAA,MAAeA,EAAA,CACb,QAAS,CAAE,cAAe,YAAc,CAC1C"}
