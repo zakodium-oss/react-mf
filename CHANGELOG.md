@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/zakodium-oss/react-mf/compare/v2.0.2...v2.0.3) (2024-06-29)
+
+
+### Bug Fixes
+
+* update mf-parser ([ef9fd68](https://github.com/zakodium-oss/react-mf/commit/ef9fd683417c859707f16cdab90b1813a9178cdd))
+
 ## [2.0.2](https://github.com/zakodium-oss/react-mf/compare/v2.0.1...v2.0.2) (2022-12-15)
 
 
