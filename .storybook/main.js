@@ -1,11 +1,23 @@
 export default {
-  stories: ['../stories/**/*.stories.jsx'],
-  addons: ['@storybook/addon-storysource', '@storybook/addon-links', '@storybook/addon-essentials'],
+  stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
+
+  addons: [
+    '@storybook/addon-storysource',
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+  ],
+
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {
+      fastRefresh: true,
+      strictMode: true,
+    },
   },
-  docs: {
-    autodocs: true
-  }
+
+  docs: {},
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
 };

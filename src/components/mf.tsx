@@ -1,8 +1,8 @@
 import { Format, parse, toDisplay } from 'mf-parser';
-import propTypes from 'prop-types';
-import { PureComponent } from 'react';
+import { memo, useMemo } from 'react';
+import type { CSSProperties, DetailedHTMLProps, HTMLAttributes } from 'react';
 
-const STYLE_SUPERIMPOSE = {
+const STYLE_SUPERIMPOSE: CSSProperties = {
   flexDirection: 'column',
   display: 'inline-flex',
   justifyContent: 'center',
@@ -15,29 +15,33 @@ const STYLE_SUPERIMPOSE_SUP_SUB = {
   fontSize: '80%',
 };
 
-export default class MF extends PureComponent {
-  render() {
-    const { mf, ...otherProps } = this.props;
+type MFPart = ReturnType<typeof parse>[number];
+
+export interface MFProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
+  /**
+   * Molecular formula to display
+   */
+  mf: string;
+}
+
+export const MF = memo(function MF(props: MFProps) {
+  const { mf, ...otherProps } = props;
+  const parsedResult = useMemo(() => {
     let parsed;
     try {
       parsed = parse(mf);
-    } catch (e) {
+    } catch {
       // If not well formatted, just display the raw value.
-      return <span {...otherProps}>{mf}</span>;
+      return mf;
     }
-    let displayed = toDisplay(parsed);
-    return <span {...otherProps}>{displayed.map(getComponent)}</span>;
-  }
-}
+    const displayed = toDisplay(parsed);
+    return displayed.map(getComponent);
+  }, [mf]);
+  return <span {...otherProps}>{parsedResult}</span>;
+});
 
-MF.propTypes = {
-  /** Molecular formula */
-  mf: propTypes.string.isRequired,
-  className: propTypes.string,
-  style: propTypes.object,
-};
-
-function getComponent(element, index) {
+function getComponent(element: MFPart, index: number) {
   switch (element.kind) {
     case Format.SUBSCRIPT: {
       return <sub key={index}>{element.value}</sub>;

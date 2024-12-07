@@ -36,7 +36,7 @@ function MyComponent() {
 
 ## Documentation
 
-See https://zakodium-oss.github.io/react-mf/ for detailed usage examples.
+See https://react-mf.pages.dev/ for detailed usage examples.
 
 [npm-image]: https://img.shields.io/npm/v/react-mf.svg
 [npm-url]: https://npmjs.org/package/react-mf
