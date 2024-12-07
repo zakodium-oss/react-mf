@@ -2,68 +2,57 @@
   "name": "react-mf",
   "version": "2.0.3",
   "description": "A react component to display molecular formulae",
-  "author": {
-    "name": "Daniel Kostro",
-    "email": "kostro.d@gmail.com"
-  },
+  "type": "module",
+  "exports": "./lib/index.js",
   "files": [
     "lib",
-    "react-mf.d.ts"
+    "src"
   ],
-  "main": "lib/index.cjs",
+  "scripts": {
+    "build": "npm run clean && npm run build-ts",
+    "build-storybook": "storybook build",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf lib",
+    "dev": "storybook dev -p 6006",
+    "eslint": "eslint .",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepack": "npm run build",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "test": "npm run eslint && npm run prettier && npm run check-types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakodium-oss/react-mf.git"
+  },
   "keywords": [
     "react",
     "molecular formula",
     "mf renderer"
   ],
-  "module": "lib/index.mjs",
-  "types": "react-mf.d.ts",
-  "scripts": {
-    "build-storybook": "cross-env STORYBOOK_BUILD=1 storybook build",
-    "compile": "vite build && cross-env VITE_BUID_CJS=1 vite build",
-    "eslint": "eslint src stories",
-    "eslint-fix": "npm run eslint -- --fix",
-    "prepack": "npm run compile",
-    "dev": "storybook dev -p 6006",
-    "test": "npm run eslint && npm run prettier",
-    "prettier": "prettier --check src stories",
-    "prettier-write": "prettier --write src stories"
-  },
+  "license": "MIT",
   "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.6",
-    "@storybook/addon-links": "^7.0.6",
-    "@storybook/addon-storysource": "^7.0.6",
-    "@storybook/react": "^7.0.6",
-    "@storybook/react-vite": "^7.0.6",
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^4.0.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.38.0",
-    "eslint-config-zakodium": "7.2.0",
-    "eslint-plugin-storybook": "^0.6.11",
-    "prettier": "^2.8.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "storybook": "^7.0.6",
-    "vite": "^4.3.1",
-    "vite-plugin-no-bundle": "^2.0.2"
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/addon-storysource": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/react-vite": "^8.4.7",
+    "@types/react": "^18.3.14",
+    "@types/react-dom": "^18.3.2",
+    "eslint": "^9.16.0",
+    "eslint-config-zakodium": "^14.0.0",
+    "eslint-plugin-storybook": "^0.11.1",
+    "prettier": "^3.4.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1"
   },
-  "repository": "zakodium-oss/react-mf",
-  "license": "MIT",
   "dependencies": {
-    "mf-parser": "^3.2.0",
-    "prop-types": "^15.8.1"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "tabWidth": 2,
-    "singleQuote": true,
-    "semi": true,
-    "trailingComma": "all"
+    "mf-parser": "^3.2.6"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "lib": ["DOM", "ES2022"],
+    "types": [],
+    "target": "ES2022",
+    "outDir": "lib",
+    "jsx": "react-jsx",
+    "module": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": false,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": ["src", "stories"]
+}
