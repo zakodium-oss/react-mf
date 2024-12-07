@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/zakodium-oss/react-mf/compare/v2.0.3...v3.0.0) (2024-12-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Package is now ESM-only and requires at least React 18.
+
+### Miscellaneous Chores
+
+* update dependencies and migrate to TS ([#19](https://github.com/zakodium-oss/react-mf/issues/19)) ([2f86a27](https://github.com/zakodium-oss/react-mf/commit/2f86a27c98b9d01498c043bdf9c68447bd8aa881))
+
 ## [2.0.3](https://github.com/zakodium-oss/react-mf/compare/v2.0.2...v2.0.3) (2024-06-29)
 
 
