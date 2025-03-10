@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/zakodium-oss/react-mf/compare/v3.0.0...v3.0.1) (2025-03-10)
+
+
+### Bug Fixes
+
+* update dependencies to deal with single charges ([#22](https://github.com/zakodium-oss/react-mf/issues/22)) ([1599a03](https://github.com/zakodium-oss/react-mf/commit/1599a03fcd8b5102cbbeb8a5ce9cae5a5c172aea))
+
 ## [3.0.0](https://github.com/zakodium-oss/react-mf/compare/v2.0.3...v3.0.0) (2024-12-07)
 
 
