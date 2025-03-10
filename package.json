@@ -37,22 +37,22 @@
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.4.7",
-    "@storybook/addon-links": "^8.4.7",
-    "@storybook/addon-storysource": "^8.4.7",
-    "@storybook/react": "^8.4.7",
-    "@storybook/react-vite": "^8.4.7",
+    "@storybook/addon-essentials": "^8.6.4",
+    "@storybook/addon-links": "^8.6.4",
+    "@storybook/addon-storysource": "^8.6.4",
+    "@storybook/react": "^8.6.4",
+    "@storybook/react-vite": "^8.6.4",
     "@types/react": "^18.3.14",
     "@types/react-dom": "^18.3.2",
-    "eslint": "^9.16.0",
+    "eslint": "^9.22.0",
     "eslint-config-zakodium": "^14.0.0",
-    "eslint-plugin-storybook": "^0.11.1",
-    "prettier": "^3.4.2",
+    "eslint-plugin-storybook": "^0.11.4",
+    "prettier": "^3.5.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^6.0.1"
   },
   "dependencies": {
-    "mf-parser": "^3.2.6"
+    "mf-parser": "^3.3.1"
   }
 }
