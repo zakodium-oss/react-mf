@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/zakodium-oss/react-mf/compare/v3.0.1...v3.1.0) (2025-03-15)
+
+
+### Features
+
+* remove useless parenthesis like in (H+) ([#24](https://github.com/zakodium-oss/react-mf/issues/24)) ([f8dc869](https://github.com/zakodium-oss/react-mf/commit/f8dc8692149c9177f243371d87aed17d741fb345))
+
 ## [3.0.1](https://github.com/zakodium-oss/react-mf/compare/v3.0.0...v3.0.1) (2025-03-10)
 
 
