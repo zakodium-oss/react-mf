@@ -1,6 +1,6 @@
 import { Format, parse, toDisplay } from 'mf-parser';
-import { memo, useMemo } from 'react';
 import type { CSSProperties, DetailedHTMLProps, HTMLAttributes } from 'react';
+import { memo, useMemo } from 'react';
 
 const STYLE_SUPERIMPOSE: CSSProperties = {
   flexDirection: 'column',
