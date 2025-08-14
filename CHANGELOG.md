@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/zakodium-oss/react-mf/compare/v3.1.0...v3.1.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* exports ([#26](https://github.com/zakodium-oss/react-mf/issues/26)) ([579c88f](https://github.com/zakodium-oss/react-mf/commit/579c88fdadb7222de6ed83b701c49d6822ed532e))
+
 ## [3.1.0](https://github.com/zakodium-oss/react-mf/compare/v3.0.1...v3.1.0) (2025-03-15)
 
 
